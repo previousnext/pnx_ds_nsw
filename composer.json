@@ -1,5 +1,5 @@
 {
-    "name": "previousnext/ds-nsw-drupal",
+    "name": "previousnext/pnx_ds_nsw",
     "type": "drupal-module",
     "require": {
         "drupal/components": "^3",
