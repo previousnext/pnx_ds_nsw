@@ -13,7 +13,7 @@ final class Hooks {
   #[Hook('system_info_alter')]
   function systemInfoAlter(array &$info, Extension $file, string $type): void {
     if ('pnx_ds_nsw' === $file->getName()) {
-      $dir =  \Safe\realpath(sprintf('%s/../ids/interchangeable-ds/components/design-system/', \DRUPAL_ROOT));
+      $dir = \Safe\realpath(sprintf('%s/../components/design-system/', \DRUPAL_ROOT));
 
       // In components/ComponentsRegistry, ltrim disallows absolute dirs, so we
       // must recompute where vendor is in relation to the DrupalRoot, even if
