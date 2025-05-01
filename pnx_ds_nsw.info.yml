@@ -1,0 +1,11 @@
+name: NSW DS
+type: module
+description: NSW Design System for PreviousNext Common Objects.
+core_version_requirement: ^11.1
+php: 8.2
+dependencies:
+  - components:components # @todo: rework to remove dep.
+  - pnx_ds_common:pnx_ds_common
+#components:
+#  namespaces:
+#    pnx-nsw: /../vendor/previousnext/nsw-nsw
