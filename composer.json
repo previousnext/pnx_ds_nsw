@@ -4,7 +4,6 @@
     "require": {
         "drupal/components": "^3",
         "drupal/pinto": "^0",
-        "previousnext/ds-common-drupal": "*",
         "previousnext/ds-nsw": "*"
     },
     "repositories": {
