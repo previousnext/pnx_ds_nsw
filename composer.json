@@ -1,6 +1,7 @@
 {
     "name": "previousnext/pnx_ds_nsw",
     "type": "drupal-module",
+    "version": "0.0.1",
     "require": {
         "drupal/components": "^3",
         "drupal/pinto": "^0",
