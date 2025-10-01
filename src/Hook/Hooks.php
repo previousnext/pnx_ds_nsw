@@ -10,6 +10,8 @@ use PreviousNext\Ds\Nsw\Utility\Twig;
 
 final class Hooks {
 
+  public const RENDER_ARRAY_KEY_TO_TWIG_TYPE = '__twigTypeVar';
+
   #[Hook('system_info_alter')]
   public function systemInfoAlter(array &$info, Extension $file, string $type): void {
     if ('pnx_ds_nsw' === $file->getName()) {
@@ -23,6 +25,19 @@ final class Hooks {
       $info['components']['namespaces'][Twig::NAMESPACE] = '/' . \PreviousNext\Ds\Common\Utility\Twig::computePathFromDrupalRootTo($dir);
 
       $info['components']['namespaces']['nswds'] = '/' . \PreviousNext\Ds\Common\Utility\Twig::computePathFromDrupalRootTo($dir);
+    }
+  }
+
+  /**
+   * Implements hook_preprocess().
+   *
+   * @phpstan-param array<string, mixed> $variables
+   */
+  #[Hook('preprocess')]
+  public function preprocess(array &$variables): void {
+    if (\array_key_exists(static::RENDER_ARRAY_KEY_TO_TWIG_TYPE, $variables) && ($variables['type'] ?? NULL) === NULL) {
+      // Can't set '#type' on render array so we juggle variable names.
+      $variables['type'] = $variables[static::RENDER_ARRAY_KEY_TO_TWIG_TYPE];
     }
   }
 
