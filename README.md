@@ -10,3 +10,5 @@ composer require previousnext/pnx_ds_nsw
 [![Latest Stable Version](https://poser.pugx.org/previousnext/pnx_ds_nsw/v)](https://packagist.org/packages/previousnext/pnx_ds_nsw)
 [![Total Downloads](https://poser.pugx.org/previousnext/pnx_ds_nsw/downloads)](https://packagist.org/packages/previousnext/pnx_ds_nsw)
 [![License](https://poser.pugx.org/previousnext/pnx_ds_nsw/license)](https://packagist.org/packages/previousnext/pnx_ds_nsw)
+
+[Documentation](https://previousnext.github.io/interchangeable-ds/nsw/) is available for the NSW design system.
